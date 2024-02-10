@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppin", sans-serif;
+	background-color: #2e3537;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    gap: 15px;
+}
+.book {
+	width: 50%;
+    max-width: 450px;
+	height: 50%;
+	position: relative;
+	transition-duration: 1s;
+    perspective: 1500;
+}
+
+.change-page {
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0.5em;
+    border: 5px solid #4173a5;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+
+.cover, .back-cover {
+	background-color: #4173a5;
+	width: 100%;
+	height: 100%;
+	border-radius: 0 15px 15px 0;
+	box-shadow: 0 0 5px rgb(41, 41, 41);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-origin: center left;
+}
+
+.cover {
+	position: absolute;
+	z-index: 9999;
+	transition: transform 1s;
+}
+.back-cover {
+	position: relative;
+	z-index: -1;
+}
+.page {
+	position: absolute;
+	background-color: white;
+	width: 95%;
+	height: 95%;
+	border-radius: 0 15px 15px 0;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition-duration: 1.5s;
+}
+
+.page img {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px 0 0 15px;
+}
+
+.front-page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+.back-page {
+	transform: rotateY(180deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	z-index: 99;
+}
+
+.container {
+    display: flex;
+}
+
+.d-flex {
+    display: flex;   
+}
+
+.align-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

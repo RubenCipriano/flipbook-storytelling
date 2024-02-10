@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recordations</title>
+        <link rel="stylesheet" href="src/css/style.css">
+    </head>
+    <body>
+        <button id="prev-page" class="change-page" onclick="changePage(-1)"></button>
+
+        <div class="book">
+            <div id="cover" class="cover">
+                <label for="checkbox-cover"></label>
+            </div>
+
+            <div class="page" id="page1">
+                <div class="front-page d-flex align-center">
+                    <h1 class="text-center">The fascinating adventure!</h1>
+                </div>
+                <div class="back-page">
+                    <img src="src/img/1.jpg">
+                </div>
+            </div>
+
+            <div class="page" id="page2">
+                <div class="front-page">
+                    <h2>Chapter 1 - When all started</h2>
+                    <p>It seems odd, but it all started in an app called "Discord" first thing I noticed, I was getting DMed by this strange username</p>
+                </div>
+                <div class="back-page">
+
+                </div>
+            </div>
+
+            <div class="page" id="page2">
+                <div class="front-page">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil magni laudantium beatae quia. Recusandae, fuga quas consectetur perferendis aperiam esse velit veniam ducimus? Quisquam consequatur perferendis quidem quia, recusandae ab!</p>
+                </div>
+                <div class="back-page">
+
+                </div>
+            </div>
+
+            <div id="back-cover" class="back-cover"></div>
+        </div>
+
+        <button id="next-page" class="change-page" onclick="changePage(1)"></button>
+
+        <script src="src/js/changePage.js"></script>
+    </body>
+</html>
