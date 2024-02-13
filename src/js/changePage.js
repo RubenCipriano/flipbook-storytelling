@@ -42,7 +42,7 @@ function changeBookPage(id) {
 
         changeZindexOfPages()
 
-        return currentPage.style = `transform: rotateY(-180deg); z-index: ${currentPage.style.zIndex}; width: ${normalPageSize - (pageOffset * 3)}`
+        return currentPage.style = `transform: rotateY(-180deg); z-index: ${currentPage.style.zIndex}; width: ${normalPageSize + (pages.length * 3) - (pageOffset * 3)}`
 
     } else {
 
